@@ -4,7 +4,6 @@ import numpy as np
 from io import BytesIO
 
 def recognize_text(image_bytes):
-    # Преобразуем байты в изображение OpenCV
     np_arr = np.frombuffer(image_bytes, np.uint8)
     img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
