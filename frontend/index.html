@@ -10,16 +10,21 @@
     <div class="wrapper">
         <div class="container">
             <h1>VoxVisor - Smart Assistant</h1>
+
+            <div class="upload-card">
+                <h2>Upload Image for Text Recognition</h2>
+                <input type="file" id="imageInput" />
+                <button onclick="uploadImageForText()">Upload</button>
+                <p id="textResult"></p>
+            </div>
+            
+            <div class="upload-card">
+                <h2>Upload Audio for Transcription</h2>
+                <input type="file" id="audioInput" />
+                <button onclick="uploadAudioForTranscription()">Upload</button>
+                <p id="audioResult"></p>
+            </div>
         
-            <h2>Upload Image for Text Recognition</h2>
-            <input type="file" id="imageInput" />
-            <button onclick="uploadImageForText()">Upload</button>
-            <p id="textResult"></p>
-        
-            <h2>Upload Audio for Transcription</h2>
-            <input type="file" id="audioInput" />
-            <button onclick="uploadAudioForTranscription()">Upload</button>
-            <p id="audioResult"></p>
         </div>
     </div>
 
