@@ -8,33 +8,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <button class="tablink" onclick="openPage('Home', this, 'red')">Text Recognition</button>
-        <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Object Recognition</button>
-        <button class="tablink" onclick="openPage('Contact', this, 'blue')">Audio Transcription</button>
-        <button class="tablink" onclick="openPage('About', this, 'orange')">Image Search</button>
-        <button class="tablink" onclick="openPage('About', this, 'orange')">Face Recognition</button>
         <div class="container">
-
-            <div id="Home" class="tabcontent">
-                <h3>Home</h3>
-                <p>Home is where the heart is..</p>
-            </div>
-            
-            <div id="News" class="tabcontent">
-                <h3>News</h3>
-                <p>Some news this fine day!</p>
-            </div>
-            
-            <div id="Contact" class="tabcontent">
-                <h3>Contact</h3>
-                <p>Get in touch, or swing by for a cup of coffee.</p>
-            </div>
-            
-            <div id="About" class="tabcontent">
-                <h3>About</h3>
-                <p>Who we are and what we do.</p>
-            </div>
-
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Result</h2>
+                  <p id="textResult"></p>
+                </div>
+              </div>
 
             <h1>VoxVisor - Smart Assistant</h1>
 
@@ -48,7 +29,7 @@
                 <input class="file-upload" id="imageInput" type="file">
             </label>
             <button class="btn primary" onclick="uploadImageForText()">Upload</button>
-            <p id="textResult"></p>
+            
             
             
             <label for="audioInput" class="upload-card">
@@ -61,7 +42,6 @@
                 <input class="file-upload" id="audioInput" type="file">
             </label>
             <button class="btn primary" onclick="uploadAudioForTranscription()">Upload</button>
-            <p id="audioResult"></p>
         </div>
     </div>
 
